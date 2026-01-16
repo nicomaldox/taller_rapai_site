@@ -1,0 +1,31 @@
+{
+  "marca": {
+    "nombre": "Rapai Quiindy",
+    "submarca": "PERFORMANCE",
+    "colorFondo": "#0b0f14",
+    "colorSuperficie": "#1a1411",
+    "colorTexto": "#f2f2f2",
+    "colorMuted": "#c9c9c9",
+    "colorBorde": "#2a221d",
+    "colorAcento": "#db7e2e"
+  },
+  "general": {
+    "ciudad": "Quiindy, Paraguay",
+    "instagram": "https://www.instagram.com/tallerrapaiquiindy?igsh=ZHB6aThobDh0MTln",
+    "facebook": "https://www.facebook.com/TallerRapaiQuiindy#",
+    "googleMaps": "https://maps.app.goo.gl/cW2p54oVdiCpcJC86",
+    "whatsappLink": "https://api.whatsapp.com/message/ZGWN2DWQMJR4N1?autoload=1&app_absent=0"
+  },
+  "copy": {
+    "heroTitulo": "Tuning, repuestos y estética para tu vehículo",
+    "heroSubtitulo": "Catálogo por categorías + presupuestos rápidos por WhatsApp. Chapería y pintura, accesorios, detallado, audio, multimedia, alarmas y más.",
+    "ctaPrincipal": "Cotizar por WhatsApp",
+    "ctaSecundario": "Ver catálogo",
+    "nota": "Respondemos por WhatsApp lo antes posible."
+  },
+  "seo": {
+    "titulo": "Rapai Quiindy Performance | Taller, Tuning y Repuestos en Quiindy",
+    "descripcion": "Taller Rapai Quiindy: chapería y pintura, tuning, repuestos, accesorios, detallado, audio, multimedia, alarmas y más. Pedí presupuesto por WhatsApp.",
+    "keywords": "taller quiindy, tuning, chaperia y pintura, repuestos, accesorios, body kit, luces led, multimedia, alarmas, gps, nanoceramico"
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "categorias": [
+    {
+      "nombre": "CHAPERÍA Y PINTURA",
+      "items": [
+        { "nombre": "Chapería y pintura", "img": "/static/img/catalogo/chaperia-y-pintura.png", "nota": "Consultar" }
+      ]
+    },
+    {
+      "nombre": "MODIFICACIÓN DE VEHÍCULOS",
+      "items": [
+        { "nombre": "Modificación de vehículos", "img": "/static/img/catalogo/modificacion-de-vehiculos.png", "nota": "Consultar" }
+      ]
+    },
+    {
+      "nombre": "BODY KIT",
+      "items": [
+        { "nombre": "Body kit", "img": "/static/img/catalogo/bodykit-gr-sport.png", "nota": "Consultar" }
+      ]
+    },
+    {
+      "nombre": "ALFOMBRAS RÍGIDAS",
+      "items": [
+        { "nombre": "Alfombras rígidas", "img": "/static/img/catalogo/alfombras-rigidas.png", "nota": "Consultar" }
+      ]
+    },
+    {
+      "nombre": "FRENTE RHINO",
+      "items": [
+        { "nombre": "Frente Rhino", "img": "/static/img/catalogo/frente-rhino.png", "nota": "Consultar" }
+      ]
+    },
+    {
+      "nombre": "FOCOS LED",
+      "items": [
+        { "nombre": "Focos LED", "img": "/static/img/catalogo/focos-led.png", "nota": "Consultar" }
+      ]
+    },
+    {
+      "nombre": "REPUESTOS NUEVOS Y USADOS",
+      "items": [
+        { "nombre": "Repuestos nuevos y usados", "img": "/static/img/catalogo/repuestos-nuevos-y-usados.png", "nota": "Consultar" }
+      ]
+    },
+    {
+      "nombre": "BARRAS LED",
+      "items": [
+        { "nombre": "Barras LED", "img": "/static/img/catalogo/barras-led.png", "nota": "Consultar" }
+      ]
+    },
+    {
+      "nombre": "IMPORTACIÓN DE REPUESTOS",
+      "items": [
+        { "nombre": "Importación de repuestos", "img": "/static/img/catalogo/importacion-de-repuestos.png", "nota": "Consultar" }
+      ]
+    },
+    {
+      "nombre": "LAVADO DETALLADO",
+      "items": [
+        { "nombre": "Lavado detallado", "img": "/static/img/catalogo/lavado-detallado.png", "nota": "Consultar" }
+      ]
+    },
+    {
+      "nombre": "ACCESORIOS PARA VEHÍCULOS DE TODAS LAS MARCAS",
+      "items": [
+        { "nombre": "Accesorios (todas las marcas)", "img": "/static/img/catalogo/accesorios-todas-las-marcas.png", "nota": "Consultar" }
+      ]
+    },
+    {
+      "nombre": "REMAP / POTENCIACIÓN DE MOTOR",
+      "items": [
+        { "nombre": "Remap / Potenciación de motor", "img": "/static/img/catalogo/remap-potenciacion-de-motor.png", "nota": "Consultar" }
+      ]
+    },
+    {
+      "nombre": "DIFUSOR DE ESCAPE",
+      "items": [
+        { "nombre": "Difusor de escape", "img": "/static/img/catalogo/difusor-de-escape.png", "nota": "Consultar" }
+      ]
+    },
+    {
+      "nombre": "CALCES DELANTEROS",
+      "items": [
+        { "nombre": "Calces delanteros", "img": "/static/img/catalogo/calces-delanteros.png", "nota": "Consultar" }
+      ]
+    },
+    {
+      "nombre": "SEPARADORES DE LLANTAS",
+      "items": [
+        { "nombre": "Separadores de llantas", "img": "/static/img/catalogo/separadores-de-llantas.png", "nota": "Consultar" }
+      ]
+    },
+    {
+      "nombre": "VENTA DE GRILLETES",
+      "items": [
+        { "nombre": "Venta de grilletes", "img": "/static/img/catalogo/venta-de-grilletes.png", "nota": "Consultar" }
+      ]
+    },
+    {
+      "nombre": "ENGOMADO DE PISO",
+      "items": [
+        { "nombre": "Engomado de piso", "img": "/static/img/catalogo/engomado-de-piso.png", "nota": "Consultar" }
+      ]
+    }
+  ]
+}
