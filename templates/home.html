@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="hero" id="inicio">
+  <div class="container hero__inner">
+    <div>
+      <h1 class="hero__title">{{ site.copy.heroTitulo }}</h1>
+      <p class="hero__sub">{{ site.copy.heroSubtitulo }}</p>
+
+      <div class="hero__actions">
+        <a class="btn btn--accent track-cta" data-evt="whatsapp_click" target="_blank" rel="noreferrer" href="{{ site.general.whatsappLink }}">Cotizar por WhatsApp</a>
+        <a class="btn btn--ghost" href="/catalogo">Ver catálogo</a>
+      </div>
+
+      <div class="hero__meta">
+        <a class="metaLink track-cta" data-evt="maps_click" target="_blank" rel="noreferrer" href="{{ site.general.googleMaps }}">Cómo llegar</a>
+        <a class="metaLink" target="_blank" rel="noreferrer" href="{{ site.general.instagram }}">Instagram</a>
+        <a class="metaLink" target="_blank" rel="noreferrer" href="{{ site.general.facebook }}">Facebook</a>
+      </div>
+    </div>
+
+    <aside class="panel">
+      <div class="panel__kicker">QUIINDY • PARAGUAY</div>
+      <div class="panel__title">Presupuesto rápido</div>
+      <p class="panel__text">Elegí un producto del catálogo y pedí cotización.</p>
+      <a class="btn btn--accent btn--full track-cta" data-evt="whatsapp_click" target="_blank" rel="noreferrer" href="{{ site.general.whatsappLink }}">Ir a WhatsApp</a>
+    </aside>
+  </div>
+</section>
+{% endblock %}

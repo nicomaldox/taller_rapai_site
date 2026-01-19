@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="section">
+  <div class="container">
+    <div class="section__head">
+      <h2 class="section__title">Catálogo</h2>
+      <input class="search" type="text" placeholder="Buscar (ej: LED, pintura, body kit…)" data-search>
+    </div>
+
+    <div class="itemsGrid itemsGrid--catalog" data-items-grid>
+      {% for cat in catalogo["categorias"] %}
+        {% for it in cat["items"] %}
+          <button class="itemCard"
+                  data-cat="{{ cat['nombre'] }}"
+                  data-item="{{ it['nombre'] }}"
+                  data-search-text="{{ (cat['nombre'] ~ ' ' ~ it['nombre'] ~ ' ' ~ (it.get('nota','')))|lower }}">
+            <div class="itemCard__imgWrap">
+              <img class="itemCard__img"
+                   src="{{ it.get('img','/static/img/catalogo/placeholder.png') }}"
+                   alt="{{ it['nombre'] }}">
+            </div>
+
+            <div class="itemCard__body">
+              <div class="itemCard__name">{{ it['nombre'] }}</div>
+              <div class="itemCard__note">{{ cat['nombre'] }}</div>
+              {% if it.get('nota') %}
+                <div class="itemCard__note">{{ it['nota'] }}</div>
+              {% endif %}
+              <div class="itemCard__cta">Cotizar →</div>
+            </div>
+          </button>
+        {% endfor %}
+      {% endfor %}
+    </div>
+
+    <div class="ctaRow">
+      <a class="btn btn--accent track-cta" data-evt="whatsapp_click" target="_blank" rel="noreferrer" href="{{ site.general.whatsappLink }}">
+        Cotizar por WhatsApp
+      </a>
+      <a class="btn btn--ghost" href="/contacto">Formulario</a>
+    </div>
+  </div>
+</section>
+{% endblock %}

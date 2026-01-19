@@ -1,16 +1,15 @@
-<!doctype html>
-<html lang="es">
-<head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Gracias | {{ site.marca.nombre }}</title>
-  <link rel="stylesheet" href="/static/css/styles.css"/>
-</head>
-<body class="thanks">
-  <div class="container thanks__box">
-    <h1 class="h1">¡Listo! ✅</h1>
-    <p class="lead">Recibimos tu consulta. Te responderemos lo antes posible.</p>
-    <a class="btn btn--primary" href="/">Volver al inicio</a>
+{% extends "base.html" %}
+{% block content %}
+<section class="section">
+  <div class="container">
+    <div class="panel">
+      <div class="panel__title">¡Consulta enviada! ✅</div>
+      <p class="panel__text">Te responderemos lo antes posible. Si querés, también podés escribirnos por WhatsApp.</p>
+      <div class="ctaRow">
+        <a class="btn btn--accent" target="_blank" rel="noreferrer" href="{{ site.general.whatsappLink }}">WhatsApp</a>
+        <a class="btn btn--ghost" href="/catalogo">Volver al catálogo</a>
+      </div>
+    </div>
   </div>
-</body>
-</html>
+</section>
+{% endblock %}

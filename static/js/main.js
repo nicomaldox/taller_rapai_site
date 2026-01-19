@@ -1,3 +1,18 @@
+// GA4 event helper (Tier 2)
+function track(evt, params = {}) {
+  if (typeof gtag === "function") {
+    gtag("event", evt, params);
+  }
+}
+
+document.addEventListener("click", (e) => {
+  const el = e.target.closest(".track-cta");
+  if (!el) return;
+  const evt = el.getAttribute("data-evt");
+  if (!evt) return;
+  track(evt, { link_url: el.href || "" });
+});
+
 (function () {
   const search = document.querySelector("[data-search]");
   const form = document.querySelector("[data-form]");
@@ -14,6 +29,9 @@
 
     const msg = document.querySelector("textarea[name='mensaje']");
     if (catInput) catInput.value = cat;
+
+    const itemInput = document.querySelector("[data-item]");
+    if (itemInput) itemInput.value = item;
 
     if (msg) {
       // If empty, set a good default message. If not empty, append.

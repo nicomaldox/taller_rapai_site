@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="section">
+  <div class="container">
+    <h2 class="section__title">Galería</h2>
+    <p class="p">Para ver trabajos recientes, visitá nuestras redes:</p>
+
+    <div class="ctaRow">
+      <a class="btn btn--accent" target="_blank" rel="noreferrer" href="{{ site.general.instagram }}">Ver Instagram</a>
+      <a class="btn btn--ghost" target="_blank" rel="noreferrer" href="{{ site.general.facebook }}">Ver Facebook</a>
+    </div>
+
+    <div class="panel" style="margin-top:16px;">
+      <div class="panel__title">¿Querés que la galería esté dentro del sitio?</div>
+      <p class="panel__text">En Tier 2 podemos subir 12–30 fotos optimizadas (antes/después) para que carguen rápido.</p>
+    </div>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>{{ site.seo.titulo }}</title>
+  <meta name="description" content="{{ site.seo.descripcion }}"/>
+  <meta name="keywords" content="{{ site.seo.keywords }}"/>
+
+  <!-- GA4 (Tier 2) -->
+  {% if site.analytics and site.analytics.ga4_measurement_id %}
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.analytics.ga4_measurement_id }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '{{ site.analytics.ga4_measurement_id }}');
+  </script>
+  {% endif %}
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg: {{ site.marca.colorFondo }};
+      --surface: {{ site.marca.colorSuperficie }};
+      --text: {{ site.marca.colorTexto }};
+      --muted: {{ site.marca.colorMuted }};
+      --border: {{ site.marca.colorBorde }};
+      --accent: {{ site.marca.colorAcento }};
+    }
+  </style>
+
+  <!-- LocalBusiness schema (Tier 2) -->
+  {% if site.seo and site.seo.schema_jsonld %}
+  <script type="application/ld+json">{{ site.seo.schema_jsonld | safe }}</script>
+  {% endif %}
+
+  <link rel="stylesheet" href="/static/css/styles.css"/>
+  <script defer src="/static/js/main.js"></script>
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a class="brand" href="/">
+        <img class="brand__logo" src="/static/img/logo.png" alt="Logo">
+        <div class="brand__text">
+          <div class="brand__name">{{ site.marca.nombre }}</div>
+          <div class="brand__sub">{{ site.marca.submarca }}</div>
+        </div>
+      </a>
+
+      <nav class="nav">
+        <a class="nav__link" href="/catalogo">Catálogo</a>
+        <a class="nav__link" href="/servicios">Servicios</a>
+        <a class="nav__link" href="/galeria">Galería</a>
+        <a class="nav__link" href="/contacto">Contacto</a>
+
+        <a class="btn btn--accent track-cta"
+           data-evt="whatsapp_click"
+           target="_blank" rel="noreferrer"
+           href="{{ site.general.whatsappLink }}">
+          Cotizar
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  {% block content %}{% endblock %}
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__left">
+        <img class="footer__logo" src="/static/img/logo.png" alt="Logo">
+        <div>
+          <div class="footer__name">{{ site.marca.nombre }} <span class="dot">•</span> {{ site.marca.submarca }}</div>
+          <div class="footer__muted">{{ site.general.ciudad }}</div>
+        </div>
+      </div>
+
+      <div class="footer__links">
+        <a class="track-cta" data-evt="whatsapp_click" target="_blank" rel="noreferrer" href="{{ site.general.whatsappLink }}">WhatsApp</a>
+        <a class="track-cta" data-evt="maps_click" target="_blank" rel="noreferrer" href="{{ site.general.googleMaps }}">Maps</a>
+        <a target="_blank" rel="noreferrer" href="{{ site.general.instagram }}">Instagram</a>
+        <a target="_blank" rel="noreferrer" href="{{ site.general.facebook }}">Facebook</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

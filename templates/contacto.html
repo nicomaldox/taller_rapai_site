@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="section section--alt">
+  <div class="container split">
+    <div>
+      <h2 class="section__title">Contacto</h2>
+      <p class="p"><strong>Ubicación:</strong> {{ site.general.ciudad }}</p>
+      <p class="p"><strong>Horario:</strong> {{ site.general.horario.texto }}</p>
+
+      <div class="ctaRow">
+        <a class="btn btn--accent track-cta" data-evt="whatsapp_click" target="_blank" rel="noreferrer" href="{{ site.general.whatsappLink }}">WhatsApp</a>
+        <a class="btn btn--ghost track-cta" data-evt="maps_click" target="_blank" rel="noreferrer" href="{{ site.general.googleMaps }}">Google Maps</a>
+      </div>
+    </div>
+
+    <div class="formCard">
+      <div class="formCard__title">Pedir presupuesto</div>
+      <form method="post" action="/lead" data-form>
+        <label class="label">Nombre
+          <input class="input" name="nombre" required>
+        </label>
+
+        <label class="label">Teléfono (requerido)
+          <input class="input" name="telefono" required>
+        </label>
+
+        <label class="label">Categoría (opcional)
+          <input class="input" name="categoria" data-categoria>
+        </label>
+
+        <label class="label">Producto/Item (opcional)
+          <input class="input" name="item" data-item>
+        </label>
+
+        <label class="label">Mensaje
+          <textarea class="textarea" name="mensaje" rows="4" required placeholder="Escribí marca/modelo y lo que necesitás"></textarea>
+        </label>
+
+        <label class="label">Preferencia de contacto
+          <select class="input" name="preferencia_contacto">
+            <option>WhatsApp</option>
+            <option>Llamada</option>
+          </select>
+        </label>
+
+        <!-- Honeypot anti-spam: should stay empty -->
+        <input type="text" name="company" style="display:none" tabindex="-1" autocomplete="off">
+
+        <input type="hidden" name="origen" value="web">
+        <button class="btn btn--accent btn--full" type="submit">Enviar</button>
+        <div class="status" data-status></div>
+      </form>
+    </div>
+  </div>
+</section>
+{% endblock %}

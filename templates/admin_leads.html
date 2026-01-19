@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="section">
+  <div class="container">
+    <h2 class="section__title">Leads (Admin)</h2>
+    <div class="ctaRow">
+      <a class="btn btn--accent" href="/admin/leads.csv">Exportar CSV</a>
+    </div>
+
+    <div style="overflow:auto; border:1px solid var(--border); border-radius:14px; margin-top:12px;">
+      <table style="width:100%; border-collapse:collapse; min-width:900px;">
+        <thead>
+          <tr style="background:rgba(0,0,0,.35);">
+            <th style="padding:10px; text-align:left;">Fecha</th>
+            <th style="padding:10px; text-align:left;">Nombre</th>
+            <th style="padding:10px; text-align:left;">Teléfono</th>
+            <th style="padding:10px; text-align:left;">Categoría</th>
+            <th style="padding:10px; text-align:left;">Item</th>
+            <th style="padding:10px; text-align:left;">Preferencia</th>
+            <th style="padding:10px; text-align:left;">Mensaje</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for r in rows %}
+            <tr style="border-top:1px solid var(--border);">
+              <td style="padding:10px; color:var(--muted);">{{ r[1] }}</td>
+              <td style="padding:10px;">{{ r[2] }}</td>
+              <td style="padding:10px; color:var(--muted);">{{ r[3] }}</td>
+              <td style="padding:10px; color:var(--muted);">{{ r[4] }}</td>
+              <td style="padding:10px; color:var(--muted);">{{ r[5] }}</td>
+              <td style="padding:10px; color:var(--muted);">{{ r[6] }}</td>
+              <td style="padding:10px;">{{ r[7] }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+{% endblock %}
